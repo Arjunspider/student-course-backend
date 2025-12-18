@@ -24,6 +24,13 @@ import com.mallikarjuna.student_course_registration.service.StudentService;
 
 import jakarta.validation.Valid;
 
+
+@CrossOrigin(
+  origins = {
+    "http://localhost:5173",
+    "https://student-course-frontend.onrender.com"
+  }
+)
 @RestController
 @RequestMapping("/students")
 public class StudentController {
