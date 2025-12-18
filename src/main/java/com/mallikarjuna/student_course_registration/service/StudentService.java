@@ -4,6 +4,9 @@ import com.mallikarjuna.student_course_registration.exception.DuplicateEmailExce
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
 
 import com.mallikarjuna.student_course_registration.entity.Student;
 import com.mallikarjuna.student_course_registration.exception.DuplicateEmailException;
