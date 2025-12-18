@@ -54,4 +54,19 @@ public class StudentController {
     public List<Student> getAllStudents() {
         return studentService.getAllStudents();
     }
+
+    // ✅ DELETE API
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteStudent(@PathVariable Long id) {
+        try {
+            studentService.deleteStudent(id);
+            return ResponseEntity.noContent().build(); // 204
+        } catch (RuntimeException e) {
+            if ("STUDENT_NOT_FOUND".equals(e.getMessage())) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                        .body("Student not found");
+            }
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
 }
