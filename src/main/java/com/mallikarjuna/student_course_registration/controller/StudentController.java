@@ -21,6 +21,8 @@ import org.springframework.web.bind.annotation.*;
 
 import com.mallikarjuna.student_course_registration.entity.Student;
 import com.mallikarjuna.student_course_registration.service.StudentService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import jakarta.validation.Valid;
 
