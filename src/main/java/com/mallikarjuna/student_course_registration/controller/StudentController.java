@@ -28,7 +28,7 @@ import jakarta.validation.Valid;
 @CrossOrigin(
   origins = {
     "http://localhost:5173",
-    "https://student-course-frontend.onrender.com"
+    "https://student-course-frontend-h75t.onrender.com/"
   }
 )
 @RestController
